@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link type="image/x-icon" href="ping-favicon.png" rel="shortcut icon">
+    <title>Registration</title>
+</head>
+
+<body>
+
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;">
+        <a class="navbar-brand mb-1" href="/">
+            <img src="ping-logo.svg" height="50" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mt-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Alpha</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Beta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Charlie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Delta</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav text-right mt-4">
+                <li class="nav-item">
+                    <a href="#" class="btn btn-outline-dark">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/registration/" class="btn btn-secondary ml-2">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- /navigation -->
+
+    <!-- hero banner -->
+    <div class="jumbotron jumbotron-fluid mb-5">
+        <div class="container">
+            <h1 class="display-4">Two great things about your Brand &reg;</h1>
+        </div>
+    </div>
+    <!-- /hero banner -->
+
+    <!-- page 1 - personal info -->
+    <div class="container" id="page1Div">
+        <h2 class='mb-5'>Personal Information</h2>
+        <form id="registration" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstName" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastName" required>
+                </div>
+            </div>
+
+            <hr>
+
+            <a href="#" class="btn btn-primary mt-5 mb-5" onclick="javascript:submitPage1();">Continue</a>
+        </form>
+    </div>
+    <!-- /page 1 - personal info -->
+
+    <!-- page 2 - account info -->
+    <div class="container collapse" id="page2Div">
+        <h2 class='mb-5'>Security</h2>
+        <form id="registration" method="POST">
+            <input type="hidden" id="inputDistinguishedName">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputMobile">Mobile Number</label>
+                    <input type="tel" class="form-control" id="inputMobile" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputMail">Email Address</label>
+                    <input type="email" class="form-control" id="inputMail" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" required>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-primary mt-5 mb-5" onclick="javascript:submitPage2();">Finish</a>
+        </form>
+    </div>
+    <!-- /page 2 - account info -->
+
+    <!-- all done -->
+    <div class="container collapse" style="height: 600px;" id="allDoneDiv">
+        <h2>Thank You</h2>
+        <p class="mb-5">Your account has been created and your password assigned. We recommend installing the TransUnion Mobile application for the best experience.</p>
+        <img src="google-play-badge.png" height="70px" class="ml-n3">
+        <img src="app-store-badge.svg" width="142px">
+    </div>
+    <!-- /all done -->
+
+    <!-- warningDiv -->
+    <div class="container collapse mt-4" id="warningDiv">
+        <div class="alert alert-warning" id="warningMessage">pending</div>
+    </div>
+    <!-- /warningDiv -->
+
+    <!-- footer -->
+    <nav class="navbar navbar-light bg-light mt-5">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/registration/">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="#" href="#">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Terms of Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Privacy</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- /footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+        let authHeader = 'Y249YWRtaW5pc3RyYXRvcjoyRmVkZXJhdGVNMHJl';
+        let pingDirectory = 'dir.example.com';
+        let parentDn = 'ou=people,dc=example,dc=com';
+
+        function submitPage1() {
+            console.log('submitPage1 function called');
+
+            firstName = $('#inputFirstName').val();
+            lastName = $('#inputLastName').val();
+
+            var data = {
+                "_parentDN": parentDn,
+                "objectClass": ["inetOrgPerson"],
+                "givenName": [firstName],
+                "sn": [lastName],
+                "cn": [firstName + " " + lastName],
+            }
+
+            var settings = {
+                "url": "https://" + pingDirectory + "/directory/v1",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json",
+                    "Authorization": "Basic " + authHeader
+                },
+                "data": JSON.stringify(data)
+            };
+
+            $.ajax(settings)
+                .done(function(data) {
+                    console.log("Account created");
+                    distinguishedName = data._dn;
+                    console.log(distinguishedName);
+                    $('#warningMessage').text('');
+                    $('#warningDiv').hide();
+                    $('#page1Div').hide();
+                    $("#inputDistinguishedName").val(distinguishedName);
+                    $('#page2Div').show();
+                })
+                .fail(function(data, status, error) {
+                    console.log("Unable to create account");
+                    var responseText = $.parseJSON(data.responseText);
+                    $('#warningMessage').text(responseText.details[0].message);
+                    $('#warningDiv').show();
+                })
+
+        }
+
+        function submitPage2() {
+            console.log('submitPage2 function called');
+
+            password = $('#inputPassword').val();
+            distinguishedName = $('#inputDistinguishedName').val();
+            mobile = $('#inputMobile').val();
+            mail = $('#inputMail').val();
+
+            var data = {
+                "uid": [mail],
+                "mail": [mail],
+                "userPassword": [password],
+                "mobile": [mobile],
+            };
+
+            var settings = {
+                "url": "https://" + pingDirectory + "/directory/v1/" + distinguishedName,
+                "method": "PUT",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json",
+                    "Authorization": "Basic " + authHeader
+                },
+                "data": JSON.stringify(data)
+            };
+
+            $.ajax(settings)
+                .done(function(data) {
+                    console.log("Password assigned");
+                    $('#warningMessage').text('');
+                    $('#warningDiv').hide();
+                    $('#page1Div').hide();
+                    $('#page2Div').hide();
+                    $('#allDoneDiv').show();
+                })
+                .fail(function(data, status, error) {
+                    console.log("Unable to assign password");
+                    var responseText = $.parseJSON(data.responseText);
+                    $('#warningMessage').text(responseText.details[0].message);
+                    $('#warningDiv').show();
+                })
+
+        }
+    </script>
+</body>
+
+</html>
