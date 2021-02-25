@@ -10,4 +10,4 @@
 
 ``kubectl create deployment --image=michaeldeller/demo-registration friendlyname-demo-registration``
 
-``kubectl expose deployment friendlyname-demo-registration --port=80 --target-port=80 --type=LoadBalancer --name=friendlyname-demo-registartion-lb``
+``kubectl expose deployment friendlyname-demo-registration --port=80 --target-port=80 --type=LoadBalancer --name=friendlyname-demo-registration-lb``
